@@ -6,25 +6,25 @@
 // Author:     Dan Ouellette
 // Date:       15 February 2019
 // Description:
-//   This C++ console application analyzes the types of 
+//   This C++ console application analyzes the types of
 // characters in a string entered by the user.  It prompts
 // for and gets from the user a string containing at least
 // ten characters.  If the string contains fewer than ten
-// characters, it prints an error message.  If the string 
-// contains at least ten characters, it tests the third, 
+// characters, it prints an error message.  If the string
+// contains at least ten characters, it tests the third,
 // sixth, and ninth characters to answer the following:
 //   -Is the character a digit?
 //   -Is the character alphanumeric?
 //   -Is the character punctuation?
 // It shows the results for each character analysis.
-// 
+//
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 int main()
@@ -38,7 +38,7 @@ int main()
 	char type;
 	int Boxes;
 	int Discount;
-	string Code; 
+	string Code;
 	string s;
 
 	// Format real numbers
@@ -46,7 +46,8 @@ int main()
 
 	// Show application header
 	cout << "Welcome to Letter Lovers" << endl;
-	cout << "------------------------" << endl << endl;
+	cout << "------------------------" << endl
+		 << endl;
 
 	//// Prompt for and get string
 	cout << "Enter the number of boxes purchased: ";
@@ -57,7 +58,8 @@ int main()
 		cout << "\nEnter the number of boxes purchased (1-9): ";
 		cin >> Boxes;
 	}
-	cout << "'" << Boxes << "' is a valid number of boxes." << endl << endl;
+	cout << "'" << Boxes << "' is a valid number of boxes." << endl
+		 << endl;
 	// prompt for and get user percentage discount
 	cout << "Enter the Percentage discount (0-20): ";
 	cin >> Discount;
@@ -67,7 +69,8 @@ int main()
 		cout << "\nEnter the Percentage discount (0-20): ";
 		cin >> s;
 	}
-	cout << "'" << s << "' is a valid percentage discount." << endl << endl;
+	cout << "'" << s << "' is a valid percentage discount." << endl
+		 << endl;
 	// prompt for and get user cereal codes
 	cout << "Enter the cereal code (w-wheaties, c-cheerios, r-rice krispies): ";
 	cin >> type;
@@ -77,7 +80,8 @@ int main()
 		cout << "\nEnter the cereal code (w-wheaties, c-cheerios, r-rice krispies):): ";
 		cin >> s;
 	}
-	cout << "'" << s << "' is a valid number of boxes." << endl << endl;
+	cout << "'" << s << "' is a valid number of boxes." << endl
+		 << endl;
 	// Test which gas type entered
 	cout << "Enter a gas type (w-wheaties, c-cheerios, r-rice krispies):): ";
 	if (type == "w")
@@ -88,7 +92,6 @@ int main()
 		cout << "Cereal type 'Rice Krispies' cost $3.00 per gallon." << endl;
 	else
 		cout << "'" << type << "'is an unknown cereal type" << endl;
-
 
 	// Test which gas type entered
 	cout << "Using previously entered gas type of '" << type << "'." << endl;
@@ -120,7 +123,7 @@ int main()
 			<< setw(COLFMT1) << left << "Discount (%):"
 			<< setw(COLFMT2) << right << Discount << endl
 			<< setw(COLFMT1) << left << "Cereal code:"
-			<< setw(COLFMT2) << right << Cereal_Code << endl 
+			<< setw(COLFMT2) << right << Cereal_Code << endl
 			<< setw(COLFMT1) << left << "Cereal type" << endl
 			<< setw(COLFMT2) << right << "Cherios" << endl
 			<< setw(COLFMT1) << left << "Cereal cost ($):"
@@ -146,16 +149,13 @@ int main()
 			<< setw(COLFMT2) << right << total << endl;
 		// cout << "Cereal type 'Rice krispies' cost $3.00 cost per gallon." << endl;
 		break;
-
-
-
 	}
 
-  // Show application close
-  cout << "\nEnd of Creal Suppers" << endl << endl;
+	// Show application close
+	cout << "\nEnd of Creal Suppers" << endl
+		 << endl;
 
-  // Pause before application window closes
-  cout << "Press any key to exit ..." << endl;
-  _getch();
-
+	// Pause before application window closes
+	cout << "Press any key to exit ..." << endl;
+	_getch();
 }

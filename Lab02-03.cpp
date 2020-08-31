@@ -9,29 +9,29 @@
 //   <A C++ application that calculates the total and average snowfall>
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>   // For function getch()
+#include <cstdlib>   // For several general-purpose functions
+#include <fstream>   // For file handling
+#include <iomanip>   // For formatted output
+#include <iostream>  // For cin, cout, and system
+#include <string>    // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 int main()
 {
 
   // Declare variables
-	int month1 = 5;
-	int month2 = 9;
-	int month3 = 10;
+  int month1 = 5;
+  int month2 = 9;
+  int month3 = 10;
 
-	double total;
-	double average;
-
+  double total;
+  double average;
 
   // Show application header
-	cout << "welcome to snowfall application" << endl;
-	cout << "-------------------------------" << endl << endl;
+  cout << "welcome to snowfall application" << endl;
+  cout << "-------------------------------" << endl
+       << endl;
 
   // Calculate total and average
   total = month1 + month2 + month3;
@@ -46,10 +46,10 @@ int main()
   cout << "Average (inches/month): " << average << endl;
 
   // Show application close
-  cout << "/nEnd of snowfall application" << endl << endl;
+  cout << "/nEnd of snowfall application" << endl
+       << endl;
 
   // Pause before application window closes
   cout << "Press any key to exit ..." << endl;
   _getch();
-
 }

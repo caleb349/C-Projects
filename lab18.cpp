@@ -8,27 +8,27 @@
 // Description:
 //   C++ console application that manages college names
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 int menuOption()
 {
-	int opt; 
+	int opt;
 	cout << "\ncollege Kudos Menu" << endl
-		<< "1 - List colleges" << endl;
+		 << "1 - List colleges" << endl;
 	<< "2 - sort colleges " << endl;
 	<< "3 - search colleges" << endl;
-	<< "9 - Exit" << endl << endl;
+	<< "9 - Exit" << endl
+	<< endl;
 	<< "Enter an option: ";
 	cin >> opt;
 	// return the option
-	return (opt); 
-
+	return (opt);
 }
 int linearSearch(int array[], int arraySize, int key)
 {
@@ -42,12 +42,14 @@ int linearSearch(int array[], int arraySize, int key)
 	// return index
 	if (index == arraySize)
 	{
-		cout << "\nERROR: code '" << key << "'is not in the list." << endl << endl;
+		cout << "\nERROR: code '" << key << "'is not in the list." << endl
+			<< endl;
 		return -1;
 		{
-	else {
-		return index;
-	}
+			else
+			{
+				return index;
+			}
 		}
 	}
 }
@@ -62,19 +64,17 @@ void listColleges(string colleges[], int collegeCount)
 		cout << setw(9) << left << i;
 	}
 	cout << setw(9) << left << 'college'
-
 }
 
 int main()
 {
 	// int arrays to score scores for th teams
-	
 
 	// Show application close
-	cout << "\nEnd of Tumbering tigers" << endl << endl;
+	cout << "\nEnd of Tumbering tigers" << endl
+		 << endl;
 
 	// Pause before application window closes
 	cout << "Press any key to exit ..." << endl;
 	_getch();
-
 }

@@ -6,9 +6,9 @@
 // Author:     Caleb Obi
 // Date:       15 April 2019
 // Description:
-//   This C++ console application manages college names.  It 
-// declares string array colleges of size eight.  It then 
-// initializes it with three colleges.  The application 
+//   This C++ console application manages college names.  It
+// declares string array colleges of size eight.  It then
+// initializes it with three colleges.  The application
 // presents the following menu to the user:
 //
 //   College Kudos Menu
@@ -19,16 +19,16 @@
 //
 //   Enter an option :
 //
-// It continues to read and process menu options until the 
+// It continues to read and process menu options until the
 // user enters the sentinel value of 9.
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 //==========================================================
@@ -59,7 +59,6 @@ int menuOption()
 	cout << "\nEnter an option: ";
 	cin >> option;
 	return option;
-
 }
 
 //==========================================================
@@ -70,12 +69,12 @@ void listColleges(string colleges[], int collegeCount)
 
 	// Loop to list colleges
 	cout << endl
-		<< setw(COLFMT1) << left << "College" << endl;
+		 << setw(COLFMT1) << left << "College" << endl;
 	for (int i = 0; i < collegeCount; i++)
 		cout
-		<< setw(COLFMT1) << left << colleges[i] << endl;
-	cout << endl << "College count: " << collegeCount << endl;
-
+			<< setw(COLFMT1) << left << colleges[i] << endl;
+	cout << endl
+		 << "College count: " << collegeCount << endl;
 }
 // ========================================================
 // sortColleges
@@ -89,21 +88,20 @@ void sortColleges(string colleges[], int collegecount)
 	// loop to test each value
 	for (int i = 1; i < collegecount; i++)
 	{
-		// loop 
+		// loop
 		value = colleges[i];
 		spot = i - 1;
 		while (spot >= 0 && colleges[spot] > value)
 		{
 			colleges[spot + 1] = colleges[spot];
 			spot = spot - 1;
-
 		}
 		// place value in spot
 		colleges[spot + 1] = value;
 	}
 	// print
-	cout << endl << "colleges sorted." << endl;
-
+	cout << endl
+		 << "colleges sorted." << endl;
 }
 //==========================================================
 // searchColleges
@@ -168,13 +166,12 @@ int DeleteColleges(string colleges[], int collegeCount)
 			for (int i = index; i < collegeCount; i++)
 			{
 				colleges[i] = colleges[i + 1];
-
 			}
-			collegeCount--;// update
-			cout << endl << "college deleted\n\n";
+			collegeCount--; // update
+			cout << endl
+				 << "college deleted\n\n";
 			return collegeCount;
 		}
-	
 	}
 	/*int i = 0;
 	cout << "Enter college to delete: ";
@@ -194,7 +191,7 @@ int main()
 
 	// Declare variables
 	string colleges[ARRAY_SIZE] =
-	{ "Wayne State", "Toledo", "Michigan State" };
+		{"Wayne State", "Toledo", "Michigan State"};
 	int collegeCount = 3;
 	int option;
 	string college;
@@ -226,7 +223,7 @@ int main()
 			index = searchColleges(colleges, collegeCount, college);
 			if (index != -1)
 				cout << "'" << college << "' found at index "
-				<< index << "." << endl;
+					 << index << "." << endl;
 			else
 				cout << "'" << college << "' NOT found." << endl;
 			break;
@@ -238,7 +235,7 @@ int main()
 			index = addColleges(colleges, collegeCount);
 			if (index != -1)
 				cout << "'" << college << "' Colleges Added "
-				<< index << "." << endl;
+					 << index << "." << endl;
 			else
 				cout << "'" << college << "' NOT found." << endl;
 			break;
@@ -250,28 +247,25 @@ int main()
 			index = DeleteColleges(colleges, collegeCount);
 			if (index != -2)
 				cout << "'" << college << "' Colleges deleted "
-				<< index << "." << endl;
+					 << index << "." << endl;
 			else
 				cout << "'" << college << "' NOT found." << endl;
 			break;
 
-
-
 			// Handle invalid option
 		default:
-			cout << endl << "Error: unknown option of '" << option
-				<< "'." << endl;
-
-
+			cout << endl
+				 << "Error: unknown option of '" << option
+				 << "'." << endl;
 		}
 		option = menuOption();
 	}
 
 	// Show application close
-	cout << "\nEnd of College Kudos" << endl << endl;
+	cout << "\nEnd of College Kudos" << endl
+		 << endl;
 
 	// Pause before application window closes
 	cout << "Press any key to exit ..." << endl;
 	_getch();
-
 }

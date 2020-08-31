@@ -10,12 +10,12 @@
 //   A struct programming that prints out a user input
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 struct studentType
@@ -25,27 +25,24 @@ struct studentType
 	string lastname;
 	double gpa;
 	int credits;
-
-
 };
-// global constants 
+// global constants
 const int COLFMT = 24;
 
 void printStudent(studentType arrayname[], int arraySize)
 {
-	for (int i = 0; i < studentType(); i++) {
+	for (int i = 0; i < studentType(); i++)
+	{
 		cout << setw(COLFMT) << left << "First name:"
-			<< setw(COLFMT) << left << stu.firstname << endl
-			<< setw(COLFMT) << left << "Last name:"
-			<< setw(COLFMT) << left << stu.lastname << endl
-			<< setw(COLFMT) << left << "Gpa:"
-			<< setw(COLFMT) << left << stu.gpa << endl
-			<< setw(COLFMT) << left << "credits:"
-			<< setw(COLFMT) << left << stu.credits << endl;
-
+			 << setw(COLFMT) << left << stu.firstname << endl
+			 << setw(COLFMT) << left << "Last name:"
+			 << setw(COLFMT) << left << stu.lastname << endl
+			 << setw(COLFMT) << left << "Gpa:"
+			 << setw(COLFMT) << left << stu.gpa << endl
+			 << setw(COLFMT) << left << "credits:"
+			 << setw(COLFMT) << left << stu.credits << endl;
 	}
 }
-
 
 void addStudent(studentType arrayname[], int arraySize)
 {
@@ -74,10 +71,11 @@ void addStudent(studentType arrayname[], int arraySize)
 		<< setw(COLFMT) << left << "credits:"
 		<< setw(COLFMT) << left << stu.credits << endl;
 */
-	// Show application close	
+	// Show application close
 	cout << "\nEnd of struct application << endl << endl;
-	////
-	////	// Pause before application window closes
-	cout << "Press any key to exit ..." << endl;
+		////
+		////	// Pause before application window closes
+		cout
+		 << "Press any key to exit ..." << endl;
 	_getch();
 }

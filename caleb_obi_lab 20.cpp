@@ -6,17 +6,17 @@
 // Author:     <Caleb obi>
 // Date:       <4/7/2019>
 // Description:
-// C++ console application that manages college names.  
-// Declare string array colleges of size eight.  
+// C++ console application that manages college names.
+// Declare string array colleges of size eight.
 // Initialize the colleges array with three colleges of your choice not in alphabetical order
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 //==========================================================
@@ -24,8 +24,6 @@ using namespace std; // So "std::cout" may be abbreviated to "cout"
 //==========================================================
 //// Constants
 const int ARR_SIZE = 8;
-
-
 
 //==========================================================
 // menuOption
@@ -63,7 +61,7 @@ int findMin(string colleges[], int collegeCount, int startIndex)
 //==========================================================
 // swap
 //==========================================================
-void swap(string& value1, string& value2) // Swapping values, passed by reference
+void swap(string &value1, string &value2) // Swapping values, passed by reference
 {
 	string temp = value1;
 	value1 = value2;
@@ -94,7 +92,8 @@ void listColleges(string colleges[], int collegeCount)
 	{
 		cout << colleges[i] << endl;
 	}
-	cout << "\nCollege count: " << collegeCount << endl << endl;
+	cout << "\nCollege count: " << collegeCount << endl
+		 << endl;
 }
 
 //==========================================================
@@ -120,18 +119,18 @@ int searchColleges(string colleges[], int arraySize, string key)
 	return -1;
 }
 
-
 int main() // Excecute program
 {
 	int num = 3; // Number of colleges currently added to colleges array
 	int opt = 0;
 	int searchResult;
-	string colleges[ARR_SIZE] = { "Wayne State University", "Toledo University", "Alabama State University" };
+	string colleges[ARR_SIZE] = {"Wayne State University", "Toledo University", "Alabama State University"};
 	string key;
 
 	// Show application header
 	cout << "Welcome to my Application!" << endl;
-	cout << "--------------------------" << endl << endl;
+	cout << "--------------------------" << endl
+		 << endl;
 
 	// Write to screen
 	while (opt != 9)
@@ -139,14 +138,17 @@ int main() // Excecute program
 		opt = menuOption();
 		switch (opt)
 		{
-		case 1: listColleges(colleges, num);
+		case 1:
+			listColleges(colleges, num);
 			break;
-		case 2: sortColleges(colleges, num);
+		case 2:
+			sortColleges(colleges, num);
 			break;
 		case 3:
 			cout << "Enter  a college to search for: ";
 			cin.ignore(INT_MAX, '\n');
-			getline(cin, key); cout << endl;
+			getline(cin, key);
+			cout << endl;
 			searchResult = searchColleges(colleges, ARR_SIZE, key);
 			if (searchResult != -1)
 			{
@@ -162,7 +164,8 @@ int main() // Excecute program
 		}
 	}
 	// Show application close
-	cout << "\nEnd of College kudos" << endl << endl;
+	cout << "\nEnd of College kudos" << endl
+		 << endl;
 
 	// Pause before application window closes
 	cout << "Press any key to exit ..." << endl;
@@ -170,10 +173,3 @@ int main() // Excecute program
 	_getch();
 	return 0;
 }
-
-
-
-
-	
-
-

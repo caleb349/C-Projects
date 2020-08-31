@@ -6,18 +6,18 @@
 // Author:     Dan Ouellette
 // Date:       4 February 2019
 // Description:
-//   This C++ console application calculates and displays 
-// the Celsius equivalent of a Fahrenheit temperature.  It 
+//   This C++ console application calculates and displays
+// the Celsius equivalent of a Fahrenheit temperature.  It
 // prompts the user for a temperature in Fahrenheit, converts
 // it to Celsius and shows both values.
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 int main()
@@ -39,7 +39,8 @@ int main()
 
 	// Show application header
 	cout << "Welcome to Heat Hunters" << endl;
-	cout << "-----------------------" << endl << endl;
+	cout << "-----------------------" << endl
+		 << endl;
 
 	// Prompt for and get a Fahrenheit temperature
 	cout << "Enter temperature in Fahrenheit ranging from -60 to 120: ";
@@ -47,11 +48,13 @@ int main()
 	// test Temperature
 	if (tempF < -60 || tempF > 120)
 	{
-		cout << " Error Message" << endl << endl;
+		cout << " Error Message" << endl
+			 << endl;
 	}
 	else if (tempF > -60 || tempF < 120)
 	{
-		cout << "Convert to Celsius" << endl << endl;
+		cout << "Convert to Celsius" << endl
+			 << endl;
 	}
 	// Convert Fahrenheit to Celsius
 	tempC = (tempF - 32) * (5 / 9.);
@@ -59,17 +62,17 @@ int main()
 	// Show Fahrenheit and Celsius
 	cout << endl;
 	cout << setw(COLFMT1) << left << "Fahrenheit temperature: "
-		<< setw(COLFMT2) << right << tempF
-		<< " " << DEGREE_SYMBOL << "F" << endl;
+		 << setw(COLFMT2) << right << tempF
+		 << " " << DEGREE_SYMBOL << "F" << endl;
 	cout << setw(COLFMT1) << left << "Celsius temperature: "
-		<< setw(COLFMT2) << right << tempC
-		<< " " << DEGREE_SYMBOL << "C" << endl;
+		 << setw(COLFMT2) << right << tempC
+		 << " " << DEGREE_SYMBOL << "C" << endl;
 
 	// Show application close
-	cout << "\nEnd of Heat Hunters" << endl << endl;
+	cout << "\nEnd of Heat Hunters" << endl
+		 << endl;
 
 	// Pause before application window closes
 	cout << "Press any key to exit ..." << endl;
 	_getch();
-
 }

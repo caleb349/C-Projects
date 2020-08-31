@@ -6,16 +6,16 @@
 // Author:     Dan Ouellette
 // Date:       8 February 2019
 // Description:
-//   C++ console application that calculates and displays the cost of a customer’s purchase of one item.  
+//   C++ console application that calculates and displays the cost of a customerï¿½s purchase of one item.
 // Prompt for and get from the user the quantity of the item purchased in the range 1-10
 //
 //==========================================================
-#include <conio.h> // For function getch()
-#include <cstdlib> // For several general-purpose functions
-#include <fstream> // For file handling
-#include <iomanip> // For formatted output
-#include <iostream> // For cin, cout, and system
-#include <string> // For string data type
+#include <conio.h>	 // For function getch()
+#include <cstdlib>	 // For several general-purpose functions
+#include <fstream>	 // For file handling
+#include <iomanip>	 // For formatted output
+#include <iostream>	 // For cin, cout, and system
+#include <string>	 // For string data type
 using namespace std; // So "std::cout" may be abbreviated to "cout"
 
 int main()
@@ -45,12 +45,13 @@ int main()
 
 	// Show application header
 	cout << "Welcome to Best Bug" << endl;
-	cout << "-----------------------" << endl << endl;
+	cout << "-----------------------" << endl
+		 << endl;
 
 	// Prompt for and get a Fahrenheit temperature
 	cout << "Enter Qyantity ranging from 1-10: ";
 	cin >> tempF;
-	// prompt user for fahrenheit 
+	// prompt user for fahrenheit
 	// cout << "Enter Fahrenheit ranging from -60 to 120";
 	// cin >> tempF;
 
@@ -60,13 +61,14 @@ int main()
 	cin >> Quantity;
 	if (Quantity < 1 || Quantity > 10)
 	{
-		cout << " Error message" << endl << endl;
+		cout << " Error message" << endl
+			 << endl;
 	}
 	else if (Quantity > 1 || quantity < 10)
 	{
 		cout << "Enter product character code" << endl;
 	}
-	// Using switch statement to test 
+	// Using switch statement to test
 	switch (Product_code)
 	{
 	case 'c':
@@ -88,20 +90,19 @@ int main()
 		break;
 	}
 
-  // Convert Fahrenheit to Celsius
-  // tempC = (tempF - 32) * (5 / 9.);
-    
-  // Show Fahrenheit and Celsius
-  cout << endl;
-  cout << setw(COLFMT1) << left << "c: "
-	  << setw(COLFMT2) << right << c << endl;
-    
+	// Convert Fahrenheit to Celsius
+	// tempC = (tempF - 32) * (5 / 9.);
 
-  // Show application close
-  cout << "\nEnd of Heat Hunters" << endl << endl;
+	// Show Fahrenheit and Celsius
+	cout << endl;
+	cout << setw(COLFMT1) << left << "c: "
+		 << setw(COLFMT2) << right << c << endl;
 
-  // Pause before application window closes
-  cout << "Press any key to exit ..." << endl;
-  _getch();
+	// Show application close
+	cout << "\nEnd of Heat Hunters" << endl
+		 << endl;
 
+	// Pause before application window closes
+	cout << "Press any key to exit ..." << endl;
+	_getch();
 }
